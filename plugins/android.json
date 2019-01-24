@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-fullscreen": {
+      "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-kiosk-launcher": {
+      "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-app-launcher": {
+      "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.albane.home"
+    }
+  },
+  "dependent_plugins": {}
+}

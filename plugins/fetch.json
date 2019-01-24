@@ -1,0 +1,34 @@
+{
+  "cordova-plugin-fullscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-fullscreen"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-kiosk-launcher": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-kiosk-launcher@^1.1.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-app-launcher": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/nchutchind/cordova-plugin-app-launcher.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1.3.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

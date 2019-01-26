@@ -1,4 +1,4 @@
-    $(document).ready(function() {
+$(document).ready(function() {
     var d = new Date();
     console.log(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
     function formatAMPM(date) {
@@ -20,7 +20,14 @@
     var months = {0:"January", 1:"February", 2:"March", 3:"April", 4:"May", 5:"June",
                       6:"July", 7:"August", 8:"September", 9:"October", 10:"November", 11:"December" };
     $(".date").text(d.getDate()+" "+months[d.getMonth()]);
-    $(".cam").click(function(){
-        navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+    $(".contacts").click(function(){
+        var num = $(this).attr("number");
+        function onSuccess(result){
+            console.log("Success:"+result);
+        }
+        function onError(result) {
+            alert("Error:"+result);
+        }
+        window.plugins.CallNumber.callNumber(onSuccess, onError, num, true);
     });
 });

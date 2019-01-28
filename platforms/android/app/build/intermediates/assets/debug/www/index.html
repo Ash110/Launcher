@@ -23,8 +23,6 @@
         <meta name="msapplication-tap-highlight" content="no">
         <script src="cordova.js"></script>
         <script src="jquery-2.2.4.min.js"></script>
-        <link rel="stylesheet" href="flipclock.css">
-        <script src="flipclock.min.js"></script>
         <script src="materialize.min.js"></script>
         <link rel="stylesheet" href="materialize.min.css">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -60,10 +58,13 @@
             <div class="app-block" style="background: #f86161;">
                 <a href="tel:" style="color: aliceblue;">DIALER</a>
             </div>
+            <a href="reminders.html"><div class="app-block" style="background: #618af8;">
+                REMINDERS
+            </div></a>
             <div class="app-block" style="background: #40C151;">
                 WHATSAPP
             </div>
-            <div class="app-block" style="background: #4099c1;">
+            <div class="app-block" style="background: #4099c1;" onclick="chooseImage()">
                 VIDEO CALL
             </div>
         </div>

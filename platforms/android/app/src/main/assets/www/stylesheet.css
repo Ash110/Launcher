@@ -76,3 +76,28 @@ body{
     color: white;
     border-radius: 10px;
 }
+.reminder-card{
+    position: relative;
+    width: 90%;
+    height: auto;
+    left:0%;
+    margin: 5%;
+    border-radius: 5px;
+    background: #ffffff;
+    border:2px black solid;
+}
+.reminder-title{
+    font-size: 300%;
+    text-align: center;
+}
+.reminder-body{
+    font-size: 200%;
+    text-align: left;
+    padding: 5%;
+}
+.reminder-actions p{
+    font-size: 200%;
+    padding: 2%;
+    margin: 1%;
+    text-align: center;
+}

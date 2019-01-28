@@ -31,9 +31,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true" >
         <activity
-            android:name="org.cordova.plugin.labs.kiosk.KioskActivity"
+            android:name="com.albane.home.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
-            android:keepScreenOn="true"
             android:label="@string/activity_name"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar"

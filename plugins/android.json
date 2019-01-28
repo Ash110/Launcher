@@ -7,6 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-app-launcher": {
+      "PACKAGE_NAME": "com.albane.home"
+    },
     "cordova-plugin-fullscreen": {
       "PACKAGE_NAME": "com.albane.home"
     },

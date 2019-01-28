@@ -59,9 +59,46 @@ body{
     margin-left: 5%;
     margin-right: 5%;
 }
-.apps{
+.quick-notes{
     position: absolute;
     top: 60%;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    border: 2px black solid;
+    border-radius: 10px;
+    display: table;
+}
+.quick-notes p{
+    position: absolute;
+    width: 75%;
+    left: 2.5%;
+    height: 75%;
+    overflow-x: auto;
+    font-size: 200%;
+    top: 0%;
+    line-height: 150%;
+    word-wrap: break-word;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+}
+.listen-note{
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    width: 20%;
+    background: red;
+    color: white;
+    top: 0%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;display: table-cell;
+    vertical-align: middle;
+    line-height:1000%; 
+}
+.apps{
+    position: absolute;
+    top: 84%;
     width: 100%;
     left: 0%;
 }
@@ -100,4 +137,30 @@ body{
     padding: 2%;
     margin: 1%;
     text-align: center;
+}
+.tablet-card{
+    position: relative;
+    width: 90%;
+    height: auto;
+    left:0%;
+    margin: 5%;
+    border-radius: 5px;
+    background: #ffffff;
+    border:2px black solid;
+    background: #ffdea2;
+}
+.tablet-name{
+    font-size: 150%;
+    text-align: center;
+}
+.tablet-dose{
+    font-size: 150%;
+    text-align: center;
+    
+}
+.tablet-time{
+    font-size: 200%;
+    text-align: center;
+    padding: 5%;
+    font-weight: bolder;
 }

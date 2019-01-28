@@ -18,6 +18,9 @@
     },
     "mx.ferreyra.callnumber": {
       "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-tts": {
+      "PACKAGE_NAME": "com.albane.home"
     }
   },
   "dependent_plugins": {}

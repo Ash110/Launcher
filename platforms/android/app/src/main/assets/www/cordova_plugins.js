@@ -23,6 +23,14 @@ module.exports = [
     "clobbers": [
       "call"
     ]
+  },
+  {
+    "id": "cordova-plugin-tts.tts",
+    "file": "plugins/cordova-plugin-tts/www/tts.js",
+    "pluginId": "cordova-plugin-tts",
+    "clobbers": [
+      "TTS"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -31,7 +39,8 @@ module.exports.metadata =
   "cordova-plugin-app-launcher": "0.4.0",
   "cordova-plugin-fullscreen": "1.1.0",
   "cordova-plugin-whitelist": "1.3.3",
-  "mx.ferreyra.callnumber": "0.0.2"
+  "mx.ferreyra.callnumber": "0.0.2",
+  "cordova-plugin-tts": "0.2.3"
 };
 // BOTTOM OF METADATA
 });

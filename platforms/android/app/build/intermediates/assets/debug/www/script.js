@@ -14,7 +14,7 @@ $(document).ready(function() {
     formatAMPM(d);
     setInterval(function(){
         formatAMPM(d);
-    },30000)
+    },30000);
     var week = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",0:"Sunday"};
     $(".day").text(week[d.getDay()]);
     var months = {0:"January", 1:"February", 2:"March", 3:"April", 4:"May", 5:"June",
@@ -30,15 +30,16 @@ $(document).ready(function() {
         }
         window.plugins.CallNumber.callNumber(onSuccess, onError, num, true);
     });
-    function chooseImage(){
-        var successCallback = function(data) {
-        alert("Success!");
-        // if calling canLaunch() with getAppList:true, data will contain an array named "appList" with the package names of applications that can handle the uri specified.
-    };
-    var errorCallback = function(errMsg) {
-        alert("Error! " + errMsg);
-    }   
-        window.plugins.launcher.canLaunch({packageName:'com.google.android.apps.googleassistant'}, successCallback, errorCallback);
-
-    }
+    firebase.database().ref('Quick-Note').once('value').then(function(snapshot) {
+        var note = (snapshot.val());
+        console.log(note); 
+        $(".quick-notes p").text(note);
+    });
+    $(".listen-note").click(function(){
+        TTS.speak($(".quick-notes p").text()).then(function () {
+            alert('success');
+        }, function (reason) {
+            alert(reason);
+        });
+    });
 });

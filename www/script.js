@@ -1,3 +1,10 @@
+function addcontact(){
+    $(".add-contact").remove();
+    var name=prompt("Enter a name");
+    var number=prompt("Enter a number");
+    $(".quick-contacts").append("<div class='contacts' number='"+number+"'><img src='http://kanaeokana.net/wpcontent/uploads/2018/09/male-placeholder.jpg'><p>"+name+"</p></div>");
+    $(".quick-contacts").append("<div class='contacts add-contact' onclick='addcontact()'><img src='https://image.flaticon.com/icons/svg/78/78294.svg'><p>Create New</p>s </div>");
+}
 $(document).ready(function() {
     var d = new Date();
     console.log(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());

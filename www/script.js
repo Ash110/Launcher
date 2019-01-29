@@ -49,4 +49,7 @@ $(document).ready(function() {
             alert(reason);
         });
     });
+    $(".news-icons").click(function(){
+        window.location.href="news.html";
+    });
 });

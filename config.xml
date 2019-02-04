@@ -27,5 +27,6 @@
     <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
     <plugin name="cordova-plugin-app-launcher" spec="https://github.com/nchutchind/cordova-plugin-app-launcher.git" />
     <plugin name="cordova-plugin-tts" spec="^0.2.3" />
+    <plugin name="com.lampa.startapp" spec="^6.1.6" />
     <engine name="android" spec="^7.1.4" />
 </widget>

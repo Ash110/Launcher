@@ -20,6 +20,10 @@
         "source": "C:\\Users\\User\\Desktop\\Launcher\\platforms\\android\\app\\src\\main\\res\\mipmap-ldpi\\icon.png"
     },
     {
+        "merged": "C:\\Users\\User\\Desktop\\Launcher\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\Launcher\\platforms\\android\\app\\src\\main\\res\\xml\\file_paths.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\Desktop\\Launcher\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-mdpi_screen.png.flat",
         "source": "C:\\Users\\User\\Desktop\\Launcher\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
     },

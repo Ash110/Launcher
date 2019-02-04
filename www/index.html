@@ -24,6 +24,7 @@
         <script src="cordova.js"></script>
         <script src="jquery-2.2.4.min.js"></script>
         <script src="materialize.min.js"></script>
+		<script src="gyronorm.complete.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
         <script>
           // Initialize Firebase
@@ -45,55 +46,99 @@
         <title>Home</title>
     </head>
     <body>
-        <div class="timebox">   
-            <div class="time"></div>
-            <div class="day"></div>
-            <div class="date"></div>
-        </div>
-        <div class="quick-contacts">
-            <div class="contacts" number="9999999999">
-                <img src="http://kanaeokana.net/wp-content/uploads/2018/09/male-placeholder.jpg">
-                <p>Contact 1</p>
+		<div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Add a new Quick Contact</h4>
+                <p>Enter the details below</p>
+                <div class="input-field col s6">
+                    <input id="user_name" type="text" class="validate">
+                    <label for="user_name">Name of Contact</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="user_num" type="tel" class="validate">
+                    <label for="user_num">Phone Number</label>
+                </div>
             </div>
-            <div class="contacts" number="9999999999">
-                <img src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png">
-                <p>Contact 2</p></div>
-            <div class="contacts" number="9999999999">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymKwUmJT08vEvm7xmlj9QgtcstYsT_t9GqpwAwQWGNC1EJpu2">
-                <p>Hospital</p>
-            </div>
-            
-            <div class="contacts" number="9999999999">
-                <img src="http://www.iconarchive.com/download/i90141/icons8/windows-8/Cinema-Avengers.ico">
-                <p>Avengers</p>
-            </div>
-            <div class="contacts add-contact" onclick="addcontact()">
-                <img src="https://image.flaticon.com/icons/svg/78/78294.svg">
-                <p>Create New</p>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat add-cntct-btn">Add contact</a>
             </div>
         </div>
-        <div class="quick-notes">
-            <p></p>
-            <div class="listen-note"><i class="material-icons">volume_up</i></div>
-        </div>
-        <div class="news-icons">
-            <i class="material-icons medium">
-                    chrome_reader_mode
-            </i>
-        </div>
-        <div class="apps">
-            <div class="app-block" style="background: #f86161;">
-                <a href="tel:" style="color: aliceblue;">DIALER</a>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#test1">News</a></li>
+                    <li class="tab col s3"><a class="active" href="#test2">Home</a></li>
+                    <li class="tab col s3 "><a href="#test3">Tablets</a></li>
+                    <li class="tab col s3"><a href="#test4">Shared Images</a></li>
+                </ul>
             </div>
-            <a href="reminders.html"><div class="app-block" style="background: #618af8;">
-                REMINDERS
-            </div></a>
-            <div class="app-block" style="background: #40C151;">
-                WHATSAPP
+            <div id="test1" class="col s12">
+               <iframe src="news.html" style="position: absolute;
+                                              width: 100%;
+                                              height: 100%;
+                                              left: 0%;"></iframe>
             </div>
-            <div class="app-block" style="background: #4099c1;" onclick="chooseImage()">
-                VIDEO CALL
+            <div id="test2" class="col s12">
+                <div class="timebox">   
+                        <div class="time"></div>
+                        <div class="day"></div>
+                        <div    class="date"></div>
+                    </div>
+                    <div class="quick-contacts">
+                        <div class="contacts" number="9999999999">
+                            <img src="http://kanaeokana.net/wp-content/uploads/2018/09/male-placeholder.jpg">
+                            <p>Contact 1</p>
+                        </div>
+                        <div class="contacts" number="9999999999">
+                            <img src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png">
+                            <p>Contact 2</p></div>
+                        <div class="contacts" number="9999999999">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymKwUmJT08vEvm7xmlj9QgtcstYsT_t9GqpwAwQWGNC1EJpu2">
+                            <p>Hospital</p>
+                        </div>
+
+                        <div class="contacts" number="9999999999">
+                            <img src="http://www.iconarchive.com/download/i90141/icons8/windows-8/Cinema-Avengers.ico">
+                            <p>The Avengers</p>
+                        </div>
+                        <div class="contacts add-contact" onclick="addcontact()">
+                            <img src="https://image.flaticon.com/icons/svg/78/78294.svg">
+                            <p>Create New</p>
+                        </div>
+                    </div>
+                    <div class="quick-notes">
+                        <p></p>
+                        <div class="listen-note"><i class="material-icons">volume_up</i></div>
+                    </div>
+                    <div class="apps">
+                        <div class="app-block dialer" style="background: #f86161;">
+                            DIALER
+                        </div>
+                        <a href="reminders.html"><div class="app-block" style="background: #618af8;">
+                            REMINDERS
+                        </div></a>
+                        <div class="app-block whatsapp" style="background: #40C151;">
+                            WHATSAPP
+                        </div>
+                        
+                        <div class="app-block video-call" style="background: #4099c1;">
+                            VIDEO CALL
+                        </div>
+                    </div>
             </div>
+            <div id="test3" class="col s12"><iframe src="tablets.html" style="position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0%;"></iframe></div>
+            <div id="test4" class="col s12">Test 4</div>
         </div>
+		<div id="modal-fall" class="modal">
+    		<div class="modal-content">
+      			<h4>Oh no! We seemed to have detected a fall!</h4>
+      			<p>Press cancel if this was a mistake</p>
+				<div class="btn waves-light waves-effect red darken-3 cancel-fall" style="width: 100%;" >CANCEL</div><br><br>
+				<div class="calling-fall" style="font-weight: bolder;">Calling Emergency services in 5</div>
+    		</div>
+  		</div>
     </body>
 </html>

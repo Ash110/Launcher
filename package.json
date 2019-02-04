@@ -11,6 +11,7 @@
     "license": "Apache-2.0",
     "dependencies": {
         "call-number": "^1.0.1",
+        "com.lampa.startapp": "^6.1.6",
         "cordova-android": "^7.1.4",
         "cordova-plugin-app-launcher": "git+https://github.com/nchutchind/cordova-plugin-app-launcher.git",
         "cordova-plugin-applist": "^0.1.12",
@@ -25,7 +26,8 @@
             "cordova-plugin-whitelist": {},
             "mx.ferreyra.callnumber": {},
             "cordova-plugin-app-launcher": {},
-            "cordova-plugin-tts": {}
+            "cordova-plugin-tts": {},
+            "com.lampa.startapp": {}
         },
         "platforms": [
             "android"

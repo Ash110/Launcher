@@ -31,6 +31,14 @@ module.exports = [
     "clobbers": [
       "TTS"
     ]
+  },
+  {
+    "id": "com.lampa.startapp.startapp",
+    "file": "plugins/com.lampa.startapp/www/startApp.js",
+    "pluginId": "com.lampa.startapp",
+    "merges": [
+      "startApp"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -40,7 +48,8 @@ module.exports.metadata =
   "cordova-plugin-fullscreen": "1.1.0",
   "cordova-plugin-whitelist": "1.3.3",
   "mx.ferreyra.callnumber": "0.0.2",
-  "cordova-plugin-tts": "0.2.3"
+  "cordova-plugin-tts": "0.2.3",
+  "com.lampa.startapp": "6.1.6"
 };
 // BOTTOM OF METADATA
 });

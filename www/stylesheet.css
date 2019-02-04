@@ -112,6 +112,9 @@ body{
     font-size: 300%;
     color: white;
     border-radius: 10px;
+    display: table;
+}
+
 }
 .reminder-card{
     position: relative;
@@ -163,9 +166,4 @@ body{
     text-align: center;
     padding: 5%;
     font-weight: bolder;
-}
-.news-icons{
-    position: absolute;
-    top: 2%;
-    left: 5%;
 }

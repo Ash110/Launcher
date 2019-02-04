@@ -21,6 +21,9 @@
     },
     "cordova-plugin-tts": {
       "PACKAGE_NAME": "com.albane.home"
+    },
+    "com.lampa.startapp": {
+      "PACKAGE_NAME": "com.albane.home"
     }
   },
   "dependent_plugins": {}

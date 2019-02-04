@@ -112,6 +112,9 @@ body{
     font-size: 300%;
     color: white;
     border-radius: 10px;
+    display: table;
+}
+
 }
 .reminder-card{
     position: relative;

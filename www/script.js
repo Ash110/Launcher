@@ -127,6 +127,7 @@ $(document).ready(function() {
 		$('#modal-fall').modal('close');
 	});
 	$(".contacts").click(function(){
+        alert("clicked");
         function onSuccess(result){
             console.log("Success:"+result);
         }

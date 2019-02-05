@@ -59,9 +59,6 @@ $(document).ready(function() {
             alert(reason);
         });
     });
-    $(".news-icons").click(function(){
-        window.location.href="news.html";
-    });
     $(".dialer").click(function(){
         var sApp = startApp.set({
             "application":"com.google.android.contacts"
@@ -96,9 +93,6 @@ $(document).ready(function() {
 	};
 	gn.init(args).then(function(){
     	gn.start(function(data){
-        	$("#ax").text("X : " + data.dm.gx);
-        	$("#ay").text("Y : " + data.dm.gy);
-        	$("#az").text("Z : " + data.dm.gz);
         	var aa = Math.pow((Math.pow(data.dm.gx,2) + Math.pow(data.dm.gy,2)+Math.pow(data.dm.gz,2)),(1/2));
         	if(aa>50){
 				$('#modal-fall').modal('open');
@@ -132,5 +126,13 @@ $(document).ready(function() {
 	$(".cancel-fall").click(function(){
 		$('#modal-fall').modal('close');
 	});
-	
+	$(".contacts").click(function(){
+        function onSuccess(result){
+            console.log("Success:"+result);
+        }
+        function onError(result) {
+            alert("Error:"+result);
+        }
+        window.plugins.CallNumber.callNumber(onSuccess, onError, "9999999999", true); 
+    });
 });

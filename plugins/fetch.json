@@ -15,14 +15,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "mx.ferreyra.callnumber": {
-    "source": {
-      "type": "registry",
-      "id": "call-number@^1.0.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-app-launcher": {
     "source": {
       "type": "registry",
@@ -43,6 +35,14 @@
     "source": {
       "type": "registry",
       "id": "com.lampa.startapp"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "call-number": {
+    "source": {
+      "type": "registry",
+      "id": "mx.ferreyra.callnumber"
     },
     "is_top_level": true,
     "variables": {}

@@ -14,6 +14,10 @@ function addcontact(){
     });
     console.log(times);
 $(document).ready(function() {
+    $('.example').swichTab({
+        swiper: true,
+        index: 1
+    });
     $('.tabs').tabs();
     var d = new Date();
     console.log(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());

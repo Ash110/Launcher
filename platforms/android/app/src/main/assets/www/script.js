@@ -1,9 +1,12 @@
 function addcontact(){
     $(".add-contact").remove();
-    var name=prompt("Enter a name");
-    var number=prompt("Enter a number");
-    $(".quick-contacts").append("<div class='contacts' number='"+number+"'><img src='https://image.flaticon.com/icons/svg/145/145867.svg'><p>"+name+"</p></div>");
-    $(".quick-contacts").append("<div class='contacts add-contact' onclick='addcontact()'><img src='https://image.flaticon.com/icons/svg/78/78294.svg'><p>Create New</p></div>"); 
+    $('#modal1').modal('open');
+    $(".add-cntct-btn").click(function(){
+        var user_name = document.getElementById("user_name").value;
+        var user_num = document.getElementById("user_num").value;
+        $(".quick-contacts").append("<div class='contacts' number='"+user_num+"'><img src='https://image.flaticon.com/icons/svg/145/145867.svg'><p>"+user_name+"</p></div>");
+        $(".quick-contacts").append("<div class='contacts add-contact' onclick='addcontact()'><img src='https://image.flaticon.com/icons/svg/78/78294.svg'><p>Create New</p></div>");
+    });
 }
     var times = ['01:00 am', '06:00 pm', '12:00 pm', '03:00 am', '12:00 am'];
     times.sort(function (a, b) {
@@ -11,6 +14,10 @@ function addcontact(){
     });
     console.log(times);
 $(document).ready(function() {
+    $('.example').swichTab({
+        swiper: true,
+        index: 1
+    });
     $('.tabs').tabs();
     var d = new Date();
     console.log(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
@@ -43,21 +50,19 @@ $(document).ready(function() {
         }
         window.plugins.CallNumber.callNumber(onSuccess, onError, num, true);
     });
-        
-    firebase.database().ref('Quick-Note').once('value').then(function(snapshot) {
-        var note = (snapshot.val());
-        console.log("You have a note from "+note.Sender+" . "+note.Note); 
-        $(".quick-notes p").text("You have a note from "+note.Sender+" . "+note.Note);
-    });
+    setInterval(function(){
+		firebase.database().ref('Quick-Note').once('value').then(function(snapshot) {
+        	var note = (snapshot.val());
+        	console.log("You have a note from "+note.Sender+" . "+note.Note); 
+        	$(".quick-notes p").text("You have a note from "+note.Sender+" . "+note.Note);
+    	});
+	},5000);
     $(".listen-note").click(function(){
         TTS.speak($(".quick-notes p").text()).then(function () {
             alert('success');
         }, function (reason) {
             alert(reason);
         });
-    });
-    $(".news-icons").click(function(){
-        window.location.href="news.html";
     });
     $(".dialer").click(function(){
         var sApp = startApp.set({
@@ -93,9 +98,6 @@ $(document).ready(function() {
 	};
 	gn.init(args).then(function(){
     	gn.start(function(data){
-        	$("#ax").text("X : " + data.dm.gx);
-        	$("#ay").text("Y : " + data.dm.gy);
-        	$("#az").text("Z : " + data.dm.gz);
         	var aa = Math.pow((Math.pow(data.dm.gx,2) + Math.pow(data.dm.gy,2)+Math.pow(data.dm.gz,2)),(1/2));
         	if(aa>50){
 				$('#modal-fall').modal('open');
@@ -129,5 +131,14 @@ $(document).ready(function() {
 	$(".cancel-fall").click(function(){
 		$('#modal-fall').modal('close');
 	});
-	
+	$(".contacts").click(function(){
+        alert("clicked");
+        function onSuccess(result){
+            console.log("Success:"+result);
+        }
+        function onError(result) {
+            alert("Error:"+result);
+        }
+        window.plugins.CallNumber.callNumber(onSuccess, onError, "9999999999", true); 
+    });
 });

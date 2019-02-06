@@ -50,12 +50,13 @@ $(document).ready(function() {
         }
         window.plugins.CallNumber.callNumber(onSuccess, onError, num, true);
     });
-        
-    firebase.database().ref('Quick-Note').once('value').then(function(snapshot) {
-        var note = (snapshot.val());
-        console.log("You have a note from "+note.Sender+" . "+note.Note); 
-        $(".quick-notes p").text("You have a note from "+note.Sender+" . "+note.Note);
-    });
+    setInterval(function(){
+		firebase.database().ref('Quick-Note').once('value').then(function(snapshot) {
+        	var note = (snapshot.val());
+        	console.log("You have a note from "+note.Sender+" . "+note.Note); 
+        	$(".quick-notes p").text("You have a note from "+note.Sender+" . "+note.Note);
+    	});
+	},5000);
     $(".listen-note").click(function(){
         TTS.speak($(".quick-notes p").text()).then(function () {
             alert('success');

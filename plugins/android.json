@@ -24,6 +24,9 @@
     },
     "call-number": {
       "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.albane.home"
     }
   },
   "dependent_plugins": {}

@@ -1,175 +1,175 @@
 <!DOCTYPE html>
 <!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
 -->
 <html>
-    <head>
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <script src="cordova.js"></script>
-        <script src="jquery-2.2.4.min.js"></script>
-        <script src="materialize.min.js"></script>
+	<head>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<script src="cordova.js"></script>
+		<script src="jquery-2.2.4.min.js"></script>
+		<script src="materialize.min.js"></script>
 		<script src="gyronorm.complete.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyBX63Tr1ZgIfk81qhosMyVCOi_mx2I6KVI",
-                authDomain: "prakalpa-project.firebaseapp.com",
-                databaseURL: "https://prakalpa-project.firebaseio.com",
-                projectId: "prakalpa-project",
-                storageBucket: "prakalpa-project.appspot.com",
-                messagingSenderId: "220385639867"
-            };
-            firebase.initializeApp(config);
-        </script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="materialize.min.css">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <script src="jquery.swichTab.js"></script>
-        <link rel="stylesheet" type="text/css" href="swichTab.css">    
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <script src="script.js"></script>
-        <title>Home</title>
-    </head>
-    <body>
-        <div class="tabGroup example">
-            <ul class="swichtab-controller">
-                <li data-swichtab="controller"><a href="#tab1">NEWS</a></li>
-                <li data-swichtab="controller"><a href="#tab2">HOME</a></li>
-                <li data-swichtab="controller"><a href="#tab3">TABLETS</a></li>
-            </ul>
-              <div class="swichtab-contents">
-                  <div id="tab1" class="swichtab-panel" data-swichtab="target">
-               			<iframe src="news.html" style="position: absolute;
-                                              top: 10%;
-                                              left: 0%;
-                                              width: 100%;
-                                              height: 100%;
-                                              overflow: auto;"></iframe>
-                  </div>
-                  <div id="tab2" class="swichtab-panel" data-swichtab="target">
-                      <div id="modal1" class="modal">
-            			<div class="modal-content">
-                			<h4>Add a new Quick Contact</h4>
-                			<p>Enter the details below</p>
-                			<div class="input-field col s6">
-                    			<input id="user_name" type="text" class="validate">
-                    			<label for="user_name">Name of Contact</label>
-                			</div>
-                			<div class="input-field col s6">
-                    			<input id="user_num" type="tel" class="validate">
-                    			<label for="user_num">Phone Number</label>
-                			</div>
-            			</div>
-            			<div class="modal-footer">
-                			<a href="#!" class="modal-close waves-effect waves-green btn-flat add-cntct-btn">Add contact</a>
-            			</div>
-        			</div>
-					 <div id="whatsapp-modal" class="modal modal-fixed-footer">
-            			<div class="modal-content">
-                			<h4 class="whatsapp-title">Enter the message to send to </h4>
-							<div class="row">
-    							<form class="col s12">
-      								<div class="row">
-        								<div class="input-field col s12">
-          										<textarea id="textarea1" class="materialize-textarea whatsapp-message" style="font-size: 45px;"></textarea>
-          										<label for="textarea1">Enter your message here</label>
-        								</div>
-      								</div>
-    							</form>
-  							</div>
-            			</div>
-            			<div class="modal-footer">
-                			<a href="#!" class=" btn modal-close waves-effect waves-light send-whatsapp" style="color: white;">Send Message</a>
-            			</div>
+		<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyBX63Tr1ZgIfk81qhosMyVCOi_mx2I6KVI",
+				authDomain: "prakalpa-project.firebaseapp.com",
+				databaseURL: "https://prakalpa-project.firebaseio.com",
+				projectId: "prakalpa-project",
+				storageBucket: "prakalpa-project.appspot.com",
+				messagingSenderId: "220385639867"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="materialize.min.css">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<script src="jquery.swichTab.js"></script>
+		<link rel="stylesheet" type="text/css" href="swichTab.css">    
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script src="script.js"></script>
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="tabGroup example">
+			<ul class="swichtab-controller">
+				<li data-swichtab="controller"><a href="#tab1">NEWS</a></li>
+				<li data-swichtab="controller"><a href="#tab2">HOME</a></li>
+				<li data-swichtab="controller"><a href="#tab3">TABLETS</a></li>
+			</ul>
+			<div class="swichtab-contents">
+				<div id="tab1" class="swichtab-panel" data-swichtab="target">
+					<iframe src="news.html" style="position: absolute;
+												   top: 7%;
+												   left: 0%;
+												   width: 100%;
+												   height: 100%;
+												   overflow: auto;"></iframe>
+				</div>
+				<div id="tab2" class="swichtab-panel" data-swichtab="target">
+					<div id="modal1" class="modal">
+						<div class="modal-content">
+							<h4>Add a new Quick Contact</h4>
+							<p>Enter the details below</p>
+							<div class="input-field col s6">
+								<input id="user_name" type="text" class="validate">
+								<label for="user_name">Name of Contact</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="user_num" type="tel" class="validate">
+								<label for="user_num">Phone Number</label>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class="modal-close waves-effect waves-green btn-flat add-cntct-btn">Add contact</a>
+						</div>
 					</div>
-                <div class="timebox">   
-                        <div class="time"></div>
-                        <div class="day"></div>
-                        <div    class="date"></div>
-                    </div>
-                    <div class="quick-contacts">
-                        <div class="contacts" number="9999999999">
-                            <img src="http://kanaeokana.net/wp-content/uploads/2018/09/male-placeholder.jpg">
-                            <p>Contact 1</p>
-                        </div>
-                        <div class="contacts" number="9999999999">
-                            <img src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png">
-                            <p>Contact 2</p></div>
-                        <div class="contacts" number="9999999999">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymKwUmJT08vEvm7xmlj9QgtcstYsT_t9GqpwAwQWGNC1EJpu2">
-                            <p>Hospital</p>
-                        </div>
+					<div id="whatsapp-modal" class="modal modal-fixed-footer">
+						<div class="modal-content">
+							<h4 class="whatsapp-title">Enter the message to send to </h4>
+							<div class="row">
+								<form class="col s12">
+									<div class="row">
+										<div class="input-field col s12">
+											<textarea id="textarea1" class="materialize-textarea whatsapp-message" style="font-size: 45px;"></textarea>
+											<label for="textarea1">Enter your message here</label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class=" btn modal-close waves-effect waves-light send-whatsapp" style="color: white;">Send Message</a>
+						</div>
+					</div>
+					<div class="timebox">   
+						<div class="time"></div>
+						<div class="day"></div>
+						<div    class="date"></div>
+					</div>
+					<div class="quick-contacts">
+						<div class="contacts" number="9999999999">
+							<img src="http://kanaeokana.net/wp-content/uploads/2018/09/male-placeholder.jpg">
+							<p>Contact 1</p>
+						</div>
+						<div class="contacts" number="9999999999">
+							<img src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png">
+							<p>Contact 2</p></div>
+						<div class="contacts" number="9999999999">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymKwUmJT08vEvm7xmlj9QgtcstYsT_t9GqpwAwQWGNC1EJpu2">
+							<p>Hospital</p>
+						</div>
 
-                        <div class="contacts" number="9999999999">
-                            <img src="http://www.iconarchive.com/download/i90141/icons8/windows-8/Cinema-Avengers.ico">
-                            <p>The Avengers</p>
-                        </div>
-                        <div class="contacts add-contact" onclick="addcontact()">
-                            <img src="https://image.flaticon.com/icons/svg/78/78294.svg">
-                            <p>Create New</p>
-                        </div>
-                    </div>
-                    <div class="quick-notes">
-                        <p></p>
-                        <div class="listen-note"><i class="material-icons">volume_up</i></div>
-                    </div>
-                    <div class="apps">
-                        <div class="app-block dialer" style="background: #f86161;">
-                            DIALER
-                        </div>
-                        <a href="reminders.html"><div class="app-block" style="background: #618af8;">
-                            REMINDERS
-                        </div></a>
-                        <div class="app-block whatsapp what-border" style="background: #40C151;">
-                            WHATSAPP
-                        </div>
-                        <div class="app-block whatsapp-ext" style="background: #40C151;">
-                            <div class="btn teal whats-cnt waves-effect waves-light">Contact 1</div>
+						<div class="contacts" number="9999999999">
+							<img src="http://www.iconarchive.com/download/i90141/icons8/windows-8/Cinema-Avengers.ico">
+							<p>The Avengers</p>
+						</div>
+						<div class="contacts add-contact" onclick="addcontact()">
+							<img src="https://image.flaticon.com/icons/svg/78/78294.svg">
+							<p>Create New</p>
+						</div>
+					</div>
+					<div class="quick-notes">
+						<p></p>
+						<div class="listen-note"><i class="material-icons">volume_up</i></div>
+					</div>
+					<div class="apps">
+						<div class="app-block dialer" style="background: #f86161;">
+							DIALER
+						</div>
+						<a href="reminders.html"><div class="app-block" style="background: #618af8;">
+							REMINDERS
+							</div></a>
+						<div class="app-block whatsapp what-border" style="background: #40C151;">
+							WHATSAPP
+						</div>
+						<div class="app-block whatsapp-ext" style="background: #40C151;">
+							<div class="btn teal whats-cnt waves-effect waves-light">Contact 1</div>
 							<div class="btn teal whats-cnt waves-effect waves-light">Contact 2</div>
 							<div class="btn teal whats-cnt waves-effect waves-light">Contact 3</div>
-                        </div>
-                        <div class="app-block video-call" style="background: #4099c1;">
-                            VIDEO CALL
-                        </div>
+						</div>
+						<div class="app-block video-call" style="background: #4099c1;">
+							VIDEO CALL
+						</div>
 						<a href="https://z364noozrm.codesandbox.io/"><div class="app-block image-rec" style="background: #efa42d;">
 							IMAGE REC
-                        </div></a>
-                    </div>
-		<div id="modal-fall" class="modal">
-    		<div class="modal-content">
-      			<h4>Oh no! We seemed to have detected a fall!</h4>
-      			<p>Press cancel if this was a mistake</p>
-				<div class="btn waves-light waves-effect red darken-3 cancel-fall" style="width: 100%;" >CANCEL</div><br><br>
-				<div class="calling-fall" style="font-weight: bolder;">Calling Emergency services in 5</div>
-    		</div>
-  		</div>
-                  </div>  
-                  <div id="tab3" class="swichtab-panel" data-swichtab="target">
-					  <iframe src="tablets.html" style="position: absolute;
-                                              top: 8%;
-                                              left: 0%;
-                                              width: 100%;
-                                              height: 100%;
-                                              overflow: auto;"></iframe>
-                  </div> 
-            </div>
-        </div>
-    </body>
+							</div></a>
+					</div>
+					<div id="modal-fall" class="modal">
+						<div class="modal-content">
+							<h4>Oh no! We seemed to have detected a fall!</h4>
+							<p>Press cancel if this was a mistake</p>
+							<div class="btn waves-light waves-effect red darken-3 cancel-fall" style="width: 100%;" >CANCEL</div><br><br>
+							<div class="calling-fall" style="font-weight: bolder;">Calling Emergency services in 5</div>
+						</div>
+					</div>
+				</div>  
+				<div id="tab3" class="swichtab-panel" data-swichtab="target">
+					<iframe src="tablets.html" style="position: absolute;
+													  top: 8%;
+													  left: 0%;
+													  width: 100%;
+													  height: 100%;
+													  overflow: auto;"></iframe>
+				</div> 
+			</div>
+		</div>
+	</body>
 </html>

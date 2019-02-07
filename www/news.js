@@ -1,11 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function () {
 	$('.dropdown-trigger').dropdown();
-	$("li").click(function(){
+	$("li").click(function(){ 
         if($(this).text()==="TOI"){
             $(".main-news").empty();
             $(function() {
         		$.ajax({
-            		type: "get",
+					type: "get",
             		url: "https://timesofindia.indiatimes.com/rssfeeds/-2128833038.cms" ,
             		crossDomain: true,
             		dataType: "xml",

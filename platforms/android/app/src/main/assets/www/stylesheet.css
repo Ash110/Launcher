@@ -114,8 +114,24 @@ body{
     border-radius: 10px;
     display: table;
 }
-
+.whatsapp-ext{
+    position: relative;
+    width: 90%;
+    left:0%;
+	margin-top: -5%;
+    text-align: center;
+    color: white;
+	padding: 0%;
+	padding-bottom: 3%;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+    display: table;
 }
+.what-border{
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
 .reminder-card{
     position: relative;
     width: 90%;

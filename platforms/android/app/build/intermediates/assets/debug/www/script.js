@@ -8,14 +8,9 @@ function addcontact(){
         $(".quick-contacts").append("<div class='contacts add-contact' onclick='addcontact()'><img src='https://image.flaticon.com/icons/svg/78/78294.svg'><p>Create New</p></div>");
     });
 }
-    var times = ['01:00 am', '06:00 pm', '12:00 pm', '03:00 am', '12:00 am'];
-    times.sort(function (a, b) {
-        return new Date('1970/01/01 ' + a) - new Date('1970/01/01 ' + b);
-    });
-    console.log(times);
 $(document).ready(function() {
+	var what_btn;
     $('.example').swichTab({
-        swiper: true,
         index: 1
     });
     $('.tabs').tabs();
@@ -56,7 +51,7 @@ $(document).ready(function() {
         	console.log("You have a note from "+note.Sender+" . "+note.Note); 
         	$(".quick-notes p").text("You have a note from "+note.Sender+" . "+note.Note);
     	});
-	},5000);
+	},2000);
     $(".listen-note").click(function(){
         TTS.speak($(".quick-notes p").text()).then(function () {
             alert('success');
@@ -73,9 +68,6 @@ $(document).ready(function() {
         }, function(error) { /* fail */
             alert(error);
         });
-    });
-    $(".whatsapp").click(function(){
-        window.open("https://api.whatsapp.com/send?phone=+919845207857&text=Hi there");
     });
     $(".video-call").click(function(){
         var sApp = startApp.set({
@@ -132,7 +124,6 @@ $(document).ready(function() {
 		$('#modal-fall').modal('close');
 	});
 	$(".contacts").click(function(){
-        alert("clicked");
         function onSuccess(result){
             console.log("Success:"+result);
         }
@@ -141,4 +132,21 @@ $(document).ready(function() {
         }
         window.plugins.CallNumber.callNumber(onSuccess, onError, "9999999999", true); 
     });
+	$(".whats-cnt").click(function(){
+		$("#whatsapp-modal").modal("open");
+		what_btn = $(this).text();
+	});
+	$(".send-whatsapp").click(function(){
+		if(what_btn==="Contact 1"){
+			var what_mes = $(".whatsapp-message").val();
+			window.open("https://api.whatsapp.com/send?phone=+918861777757&text="+what_mes);	
+		}else if(what_btn==="Contact 2"){
+			var what_mes = $(".whatsapp-message").val();
+			window.open("https://api.whatsapp.com/send?phone=+918792059509&text="+what_mes);	
+		}else if(what_btn==="Contact 3"){
+			var what_mes = $(".whatsapp-message").val();
+			window.open("https://api.whatsapp.com/send?phone=+919449810576&text="+what_mes);	
+		}
+		else{alert(what_btn)}
+	});
 });

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Feb 07 18:28:06 IST 2019
+#Thu Feb 07 23:03:51 IST 2019
 5.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 22.path=www/plugins/call-number/www/CallNumber.js
 32.set=ASSET
@@ -9,6 +9,7 @@
 27.baseType=DIRECTORY
 9.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 21.set=ASSET
+39.set=ASSET
 26.path=www/jquery.swichTab.js
 6.baseType=DIRECTORY
 36.path=www/swichTab.css
@@ -33,6 +34,7 @@
 16.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 24.set=ASSET
 6.path=www/index.html
+38.baseType=DIRECTORY
 29.baseType=DIRECTORY
 10.baseType=DIRECTORY
 13.set=ASSET
@@ -44,17 +46,19 @@
 33.path=www/img/logo.png
 17.path=www/plugins/com.lampa.startapp/www/startApp.js
 31.set=ASSET
+39.baseType=DIRECTORY
 20.baseType=DIRECTORY
 27.path=www/cordova-js-src/android/promptbasednativeapi.js
-37.path=www/news.css
+37.path=www/plugins/cordova-plugin-geolocation/www/PositionError.js
 20.set=ASSET
+38.set=ASSET
 23.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 9.baseType=DIRECTORY
 33.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 13.path=www/tablets.html
 17.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 27.set=ASSET
-count=38
+count=40
 27.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 16.set=ASSET
 37.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
@@ -87,6 +91,7 @@ count=38
 30.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 10.path=www/animate.css
 13.baseType=DIRECTORY
+38.path=www/plugins/cordova-plugin-geolocation/www/android/geolocation.js
 32.baseType=DIRECTORY
 30.set=ASSET
 24.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
@@ -98,6 +103,7 @@ count=38
 28.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 10.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 26.set=ASSET
+38.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 0.path=classes.dex
 15.set=ASSET
 14.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
@@ -130,6 +136,7 @@ count=38
 31.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 11.path=www/css/index.css
 2.set=ASSET
+39.path=www/news.css
 25.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 16.baseType=DIRECTORY
 25.baseType=DIRECTORY
@@ -141,6 +148,7 @@ count=38
 29.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 11.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 36.set=ASSET
+39.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug
 1.path=www/annoying-alarm-tone.mp3
 25.set=ASSET
 15.base=/Users/Ash/Desktop/Launcher/platforms/android/app/build/intermediates/assets/debug

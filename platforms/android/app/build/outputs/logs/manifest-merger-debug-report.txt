@@ -1,13 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
 MERGED from [:CordovaLib] /Users/Ash/Desktop/Launcher/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
 	package
 		ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:2:102-127
 		INJECTED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml
@@ -100,3 +100,15 @@ ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidMan
 		ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:15:61-85
 	android:name
 		ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:15:19-60
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:16:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:17:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:18:5-66
+	android:name
+		ADDED from /Users/Ash/Desktop/Launcher/platforms/android/app/src/main/AndroidManifest.xml:18:19-63

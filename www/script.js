@@ -79,6 +79,16 @@ $(document).ready(function() {
 			alert(error);
 		});
 	});
+	$(".whatsapp").click(function(){
+		var sApp = startApp.set({
+			"application":"com.whatsapp"
+		});
+		sApp.start(function() { /* success */
+			console.log("OK");
+		}, function(error) { /* fail */
+			alert(error);
+		});
+	});
 	var gn = new GyroNorm();
 	var args = {
 		frequency:50,					// ( How often the object sends the values - milliseconds )
@@ -117,7 +127,7 @@ $(document).ready(function() {
 			}
 		});
 	}).catch(function(e){
-		alert("Error");
+		console.log("Error");
 	});
 	$('.modal').modal();
 	$(".cancel-fall").click(function(){
@@ -147,8 +157,29 @@ $(document).ready(function() {
 			window.open("https://api.whatsapp.com/send?phone=+918792059509&text="+what_mes);	
 		}else if(what_btn==="Contact 3"){
 			var what_mes = $(".whatsapp-message").val();
-			window.open("https://api.whatsapp.com/send?phone=+919449810576&text="+what_mes);	
+			window.open("https://api.whatsapp.com/send?phone=+919945744062&text="+what_mes);	
 		}
 		else{alert(what_btn);}
+	});
+	$(".location-help").click(function(){
+		var onSuccess = function(position) {
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + position.timestamp                + '\n');
+    };
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 });

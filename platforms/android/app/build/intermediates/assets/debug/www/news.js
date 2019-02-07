@@ -3,7 +3,7 @@ $(document).ready(function () {
 	$(function() {
 		$.ajax({
 			type: "get",
-			url: "https://timesofindia.indiatimes.com/rssfeeds/-2128833038.cms" ,
+			url: "https://timesofindia.indiatimes.com/rssfeeds/-2128833038.cms",
 			crossDomain: true,
 			dataType: "xml",
 			success: function(data) {

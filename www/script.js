@@ -30,7 +30,7 @@ $(document).ready(function() {
 	setInterval(function(){
 		var d = new Date();
 		formatAMPM(d);
-	},30000);
+	},10000);
 	var week = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",0:"Sunday"};
 	$(".day").text(week[d.getDay()]);
 	var months = {0:"January", 1:"February", 2:"March", 3:"April", 4:"May", 5:"June",

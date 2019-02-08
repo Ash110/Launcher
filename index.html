@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+	<head>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<script src="jquery-2.2.4.min.js"></script>
+		<script src="materialize.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyBX63Tr1ZgIfk81qhosMyVCOi_mx2I6KVI",
+				authDomain: "prakalpa-project.firebaseapp.com",
+				databaseURL: "https://prakalpa-project.firebaseio.com",
+				projectId: "prakalpa-project",
+				storageBucket: "prakalpa-project.appspot.com",
+				messagingSenderId: "220385639867"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="materialize.min.css">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<title>Home</title>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-wrapper" style="text-align: center; width: 100%; font-size: 150%;">
+				Prakalpa Project
+			</div>
+		</nav>
+		<div style="position: absolute;
+					top: 30%;
+					width: 90%;
+					height: 30%;
+					left: 5%;
+					border:2px black solid;
+					border-radius: 10px;">
+			<div class="input-field col s6" style="width: 80%;left: 10%;">
+				<input id="last_name" type="text" class="validate">
+				<label for="last_name">Enter Name here</label>
+			</div>
+			<div class="input-field col s12" style="width: 80%;left: 10%;">
+				<textarea id="textarea1" class="materialize-textarea"></textarea>
+				<label for="textarea1">Enter your message here. Keep it short.</label>
+			</div>
+			<div class="btn waves-effect waves-light send-msg" style="left: 10%;">Send Message</div>
+		</div>
+		<div style="position: absolute;
+					top: 15%;
+					width: 90%;
+					height: 10%;
+					left: 5%;
+					border:2px black solid;
+					border-radius: 10px;
+					padding: 1%;" class="help">
+		</div>
+		<div class="btn clear" style="position: absolute; right: 7%; top: 18%;">CLEAR</div>
+		<script>
+			$(".send-msg").click(function(){
+				firebase.database().ref('Quick-Note').set({
+					Note: $("#textarea1").val(),
+					Sender:$("#last_name").val()
+				});
+			});
+			setInterval(function(){
+				firebase.database().ref('Location').once('value').then(function(snapshot) {
+					var loc = (snapshot.val());
+					$(".help").text(loc);
+				});
+			},2000);
+			$(".clear").click(function(){
+				firebase.database().ref('Location').set("No New Alert");
+			});
+		</script>
+	</body>
+</html>

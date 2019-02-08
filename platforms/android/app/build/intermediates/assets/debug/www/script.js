@@ -186,25 +186,8 @@ $(document).ready(function() {
 						'Timestamp: '         + position.timestamp                + '\n');
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
-			var messageInfo = {
-				phoneNumber: "+919945744062",
-				textMessage: "This is a test message"
-			};
-
-			sms.sendMessage(messageInfo, function(message) {
-				console.log("success: " + message);
-			}, function(error) {
-				console.log("code: " + error.code + ", message: " + error.message);
-			});
-		};
-
-		// onError Callback receives a PositionError object
-		//
-		function onError(error) {
-			alert('code: '    + error.code    + '\n' +
-				  'message: ' + error.message + '\n');
+			firebase.database().ref('Location').set("EMERGENCY! I seem to be lost! My location is http://www.google.com/maps/place/"+lat+","+lon);
 		}
-
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 });

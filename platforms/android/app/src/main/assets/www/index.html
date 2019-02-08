@@ -48,6 +48,14 @@ under the License.
 		<title>Home</title>
 	</head>
 	<body>
+		<div id="modal-fall" class="modal">
+			<div class="modal-content">
+				<h4>Oh no! We seemed to have detected a fall!</h4>
+				<p>Press cancel if this was a mistake</p>
+				<div class="btn waves-light waves-effect red darken-3 cancel-fall" style="width: 100%;" >CANCEL</div><br><br>
+				<div class="calling-fall" style="font-weight: bolder;">Calling Emergency services in 5</div>
+			</div>
+		</div>
 		<div class="tabGroup example">
 			<ul class="swichtab-controller">
 				<li data-swichtab="controller"><a href="#tab1">NEWS</a></li>
@@ -83,8 +91,8 @@ under the License.
 					</div>
 					<div class="location-help">
 						<i class="material-icons" style="position: absolute;
-													  left: 1%;
-													  font-size: 400%;z-index: 1000;">location_on</i>
+														 left: 1%;
+														 font-size: 400%;z-index: 1000;">location_on</i>
 					</div>
 					<div id="whatsapp-modal" class="modal modal-fixed-footer">
 						<div class="modal-content">
@@ -161,14 +169,7 @@ under the License.
 							</div>
 						</a>
 					</div>
-					<div id="modal-fall" class="modal">
-						<div class="modal-content">
-							<h4>Oh no! We seemed to have detected a fall!</h4>
-							<p>Press cancel if this was a mistake</p>
-							<div class="btn waves-light waves-effect red darken-3 cancel-fall" style="width: 100%;" >CANCEL</div><br><br>
-							<div class="calling-fall" style="font-weight: bolder;">Calling Emergency services in 5</div>
-						</div>
-					</div>
+
 				</div>  
 				<div id="tab3" class="swichtab-panel" data-swichtab="target">
 					<iframe src="tablets.html" style="position: absolute;

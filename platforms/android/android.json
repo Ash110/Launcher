@@ -31,6 +31,10 @@
             {
               "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Sms\"><param name=\"android-package\" value=\"com.jsmobile.plugins.sms.Sms\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -56,6 +60,12 @@
             },
             {
               "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
               "count": 1
             }
           ]
@@ -93,6 +103,9 @@
       "PACKAGE_NAME": "com.albane.home"
     },
     "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.albane.home"
+    },
+    "com.jsmobile.plugins.sms": {
       "PACKAGE_NAME": "com.albane.home"
     }
   },
@@ -151,6 +164,14 @@
       "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
       "pluginId": "cordova-plugin-geolocation",
       "runs": true
+    },
+    {
+      "id": "com.jsmobile.plugins.sms.sms",
+      "file": "plugins/com.jsmobile.plugins.sms/www/sms.js",
+      "pluginId": "com.jsmobile.plugins.sms",
+      "clobbers": [
+        "window.sms"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -160,6 +181,7 @@
     "cordova-plugin-tts": "0.2.3",
     "com.lampa.startapp": "6.1.6",
     "call-number": "0.0.2",
-    "cordova-plugin-geolocation": "4.0.1"
+    "cordova-plugin-geolocation": "4.0.1",
+    "com.jsmobile.plugins.sms": "0.0.2"
   }
 }

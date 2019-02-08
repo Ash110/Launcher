@@ -54,5 +54,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "com.jsmobile.plugins.sms": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/hazems/cordova-sms-plugin.git"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

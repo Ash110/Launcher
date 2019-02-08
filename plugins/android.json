@@ -27,6 +27,9 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.albane.home"
+    },
+    "com.jsmobile.plugins.sms": {
+      "PACKAGE_NAME": "com.albane.home"
     }
   },
   "dependent_plugins": {}

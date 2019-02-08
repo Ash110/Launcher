@@ -29,5 +29,6 @@
     <plugin name="com.lampa.startapp" spec="^6.1.6" />
     <plugin name="call-number" spec="^1.0.1" />
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="com.jsmobile.plugins.sms" spec="https://github.com/hazems/cordova-sms-plugin.git" />
     <engine name="android" spec="^7.1.4" />
 </widget>

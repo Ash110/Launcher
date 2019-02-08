@@ -80,6 +80,16 @@ $(document).ready(function() {
 			alert(error);
 		});
 	});
+	$(".assistant").click(function(){
+		var sApp = startApp.set({
+			"application":"com.google.android.apps.googleassistant"
+		});
+		sApp.start(function() { /* success */
+			console.log("OK");
+		}, function(error) { /* fail */
+			alert(error);
+		});
+	});
 	$(".whatsapp").click(function(){
 		var sApp = startApp.set({
 			"application":"com.whatsapp"
@@ -134,7 +144,7 @@ $(document).ready(function() {
 	$(".cancel-fall").click(function(){
 		$('#modal-fall').modal('close');
 		if(currentAudio!==0)
-            currentAudio.pause();
+			currentAudio.pause();
 	});
 	$(".contacts").click(function(){
 		function onSuccess(result){
@@ -163,24 +173,38 @@ $(document).ready(function() {
 		else{alert(what_btn);}
 	});
 	$(".location-help").click(function(){
+		var lat,lon;
+		alert("Loading.Please wait.");
 		var onSuccess = function(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n' +
-              'Altitude: '          + position.coords.altitude          + '\n' +
-              'Accuracy: '          + position.coords.accuracy          + '\n' +
-              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-              'Heading: '           + position.coords.heading           + '\n' +
-              'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + position.timestamp                + '\n');
-    };
+			console.log('Latitude: '          + position.coords.latitude          + '\n' +
+						'Longitude: '         + position.coords.longitude         + '\n' +
+						'Altitude: '          + position.coords.altitude          + '\n' +
+						'Accuracy: '          + position.coords.accuracy          + '\n' +
+						'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+						'Heading: '           + position.coords.heading           + '\n' +
+						'Speed: '             + position.coords.speed             + '\n' +
+						'Timestamp: '         + position.timestamp                + '\n');
+			lat = position.coords.latitude;
+			lon = position.coords.longitude;
+			var messageInfo = {
+				phoneNumber: "+919945744062",
+				textMessage: "This is a test message"
+			};
 
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
+			sms.sendMessage(messageInfo, function(message) {
+				console.log("success: " + message);
+			}, function(error) {
+				console.log("code: " + error.code + ", message: " + error.message);
+			});
+		};
 
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		// onError Callback receives a PositionError object
+		//
+		function onError(error) {
+			alert('code: '    + error.code    + '\n' +
+				  'message: ' + error.message + '\n');
+		}
+
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 });

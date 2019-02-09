@@ -19,8 +19,8 @@ $(document).ready(function() {
     rootRef.on("child_added",snap=>{
         var title = snap.child("Title").val();
         var des = snap.child("Message").val();
-        $(".reminder-cards").append(
+        /*$(".reminder-cards").append(
             "<div class='reminder-card'><p class='reminder-title'>"+title+"</p><hr width='100%;'><p class='reminder-body'>"+des+"</p><div class='reminder-actions  blue lighten-1'><p><i class='material-icons'>done</i></p></div><div class='reminder-actions red'><p><i class='material-icons'>cancel</i></p></div></div>"
-        );
+        );*/
     });
 });

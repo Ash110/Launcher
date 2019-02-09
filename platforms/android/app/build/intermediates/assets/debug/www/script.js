@@ -9,6 +9,7 @@ function addcontact(){
 	});
 }
 $(document).ready(function() {
+	var t;
 	var what_btn;
 	$('.example').swichTab({
 		index: 1
@@ -110,6 +111,7 @@ $(document).ready(function() {
 		screenAdjusted:false			// ( If set to true it will return screen adjusted values. )
 	};
 	gn.init(args).then(function(){
+
 		gn.start(function(data){
 			var aa = Math.pow((Math.pow(data.dm.gx,2) + Math.pow(data.dm.gy,2)+Math.pow(data.dm.gz,2)),(1/2));
 			if(aa>50){
@@ -119,34 +121,38 @@ $(document).ready(function() {
 				currentAudio.setAttribute('src', fileName);
 				currentAudio.setAttribute('autoplay', 'autoplay');
 				currentAudio.play();
-				var t=5;
+				t=5;
 				setInterval(function(){
-					if(t>0){
+					if(t>=0){
 						$(".calling-fall").text("Calling Emergency services in "+t);
-						t-=1;
+						t=t-1;
 					}
 				},1000);
-				setTimeout(function(){
+				setInterval(function(){
 					function onSuccess(result){
 						console.log("Success:"+result);
 					}
 					function onError(result) {
-						alert("Error:"+result);
+						console.log("Error:"+result);
 					}
-					window.plugins.CallNumber.callNumber(onSuccess, onError, "9999999999", true);
-				},6000);
+					if(t===0){
+						window.plugins.CallNumber.callNumber(onSuccess, onError, "9999999999", true);
+						currentAudio.pause();
+						$('#modal-fall').modal('close');
+					}
+				},1000);
 			}
 		});
 	}).catch(function(e){
 		console.log("Error");
 	});
-	$('.modal').modal();
+	$('.modal').modal({dismissible:false});
 	$(".cancel-fall").click(function(){
 		$('#modal-fall').modal('close');
 		if(currentAudio!==0){
 			currentAudio.pause();
 		}
-		t=0;
+		t=10;
 	});
 	$(".contacts").click(function(){
 		function onSuccess(result){

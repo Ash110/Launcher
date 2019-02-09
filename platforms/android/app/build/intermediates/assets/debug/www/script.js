@@ -143,8 +143,10 @@ $(document).ready(function() {
 	$('.modal').modal();
 	$(".cancel-fall").click(function(){
 		$('#modal-fall').modal('close');
-		if(currentAudio!==0)
+		if(currentAudio!==0){
 			currentAudio.pause();
+		}
+		t=0;
 	});
 	$(".contacts").click(function(){
 		function onSuccess(result){
@@ -174,7 +176,7 @@ $(document).ready(function() {
 	});
 	$(".location-help").click(function(){
 		var lat,lon;
-		alert("Loading.Please wait.");
+		alert("AN Alert has been sent to your caretakers! Please stay where you are.");
 		var onSuccess = function(position) {
 			console.log('Latitude: '          + position.coords.latitude          + '\n' +
 						'Longitude: '         + position.coords.longitude         + '\n' +
@@ -188,6 +190,6 @@ $(document).ready(function() {
 			lon = position.coords.longitude;
 			firebase.database().ref('Location').set("EMERGENCY! I seem to be lost! My location is http://www.google.com/maps/place/"+lat+","+lon);
 		}
-		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		navigator.geolocation.getCurrentPosition(onSuccess, function(){});
 	});
 });

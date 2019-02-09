@@ -30,6 +30,9 @@
     },
     "com.jsmobile.plugins.sms": {
       "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-kiosk-launcher": {
+      "PACKAGE_NAME": "com.albane.home"
     }
   },
   "dependent_plugins": {}

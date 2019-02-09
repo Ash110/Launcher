@@ -143,8 +143,10 @@ $(document).ready(function() {
 	$('.modal').modal();
 	$(".cancel-fall").click(function(){
 		$('#modal-fall').modal('close');
-		if(currentAudio!==0)
+		if(currentAudio!==0){
 			currentAudio.pause();
+		}
+		t=0;
 	});
 	$(".contacts").click(function(){
 		function onSuccess(result){

@@ -26,6 +26,9 @@
         <param name="android-package" value="com.wordsbaking.cordova.tts.TTS" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Kiosk">
+        <param name="android-package" value="org.cordova.plugin.labs.kiosk.Kiosk" />
+    </feature>
     <name>Home</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

@@ -55,27 +55,19 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-sms-plugin.Sms",
-    "file": "plugins/cordova-sms-plugin/www/sms.js",
-    "pluginId": "cordova-sms-plugin",
-    "clobbers": [
-      "window.sms"
-    ]
-  },
-  {
-    "id": "cordova-plugin-sms.SMS",
-    "file": "plugins/cordova-plugin-sms/www/SMS.js",
-    "pluginId": "cordova-plugin-sms",
-    "clobbers": [
-      "window.SMS"
-    ]
-  },
-  {
     "id": "com.jsmobile.plugins.sms.sms",
     "file": "plugins/com.jsmobile.plugins.sms/www/sms.js",
     "pluginId": "com.jsmobile.plugins.sms",
     "clobbers": [
       "window.sms"
+    ]
+  },
+  {
+    "id": "cordova-plugin-kiosk-launcher.kiosk",
+    "file": "plugins/cordova-plugin-kiosk-launcher/www/kiosk.js",
+    "pluginId": "cordova-plugin-kiosk-launcher",
+    "clobbers": [
+      "window.Kiosk"
     ]
   }
 ];
@@ -89,9 +81,8 @@ module.exports.metadata =
   "com.lampa.startapp": "6.1.6",
   "call-number": "0.0.2",
   "cordova-plugin-geolocation": "4.0.1",
-  "cordova-sms-plugin": "1.0.0",
-  "cordova-plugin-sms": "1.0.5",
-  "com.jsmobile.plugins.sms": "0.0.2"
+  "com.jsmobile.plugins.sms": "0.0.2",
+  "cordova-plugin-kiosk-launcher": "0.2"
 };
 // BOTTOM OF METADATA
 });

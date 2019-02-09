@@ -67,6 +67,37 @@
             {
               "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
               "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.REORDER_TASKS\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application/activity[@android:label='@string/activity_name']": [
+            {
+              "xml": "<intent-filter><action android:name=\"android.intent.action.MAIN\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.HOME\" /></intent-filter>",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:keepScreenOn=\"true\" android:name=\"org.cordova.plugin.labs.kiosk.KioskActivity\" android:theme=\"@android:style/Theme.DeviceDefault.NoActionBar\"></activity>",
+              "count": 1,
+              "mode": "merge",
+              "plugin": "cordova-plugin-kiosk-launcher",
+              "oldAttrib": {
+                "android:configChanges": "orientation|keyboardHidden|keyboard|screenSize|locale",
+                "android:keepScreenOn": "true",
+                "android:label": "@string/activity_name",
+                "android:launchMode": "singleTop",
+                "android:name": "org.cordova.plugin.labs.kiosk.KioskActivity",
+                "android:theme": "@android:style/Theme.DeviceDefault.NoActionBar",
+                "android:windowSoftInputMode": "adjustResize"
+              }
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<receiver android:name=\"org.cordova.plugin.labs.kiosk.MyPackageReplacedEventReceiver\"><intent-filter><action android:name=\"android.intent.action.MY_PACKAGE_REPLACED\" /></intent-filter></receiver>",
+              "count": 1
             }
           ]
         }
@@ -76,6 +107,10 @@
           "/*": [
             {
               "xml": "<feature name=\"TTS\"><param name=\"android-package\" value=\"com.wordsbaking.cordova.tts.TTS\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Kiosk\"><param name=\"android-package\" value=\"org.cordova.plugin.labs.kiosk.Kiosk\" /></feature>",
               "count": 1
             }
           ]
@@ -106,6 +141,9 @@
       "PACKAGE_NAME": "com.albane.home"
     },
     "com.jsmobile.plugins.sms": {
+      "PACKAGE_NAME": "com.albane.home"
+    },
+    "cordova-plugin-kiosk-launcher": {
       "PACKAGE_NAME": "com.albane.home"
     }
   },
@@ -172,6 +210,14 @@
       "clobbers": [
         "window.sms"
       ]
+    },
+    {
+      "id": "cordova-plugin-kiosk-launcher.kiosk",
+      "file": "plugins/cordova-plugin-kiosk-launcher/www/kiosk.js",
+      "pluginId": "cordova-plugin-kiosk-launcher",
+      "clobbers": [
+        "window.Kiosk"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -182,6 +228,7 @@
     "com.lampa.startapp": "6.1.6",
     "call-number": "0.0.2",
     "cordova-plugin-geolocation": "4.0.1",
-    "com.jsmobile.plugins.sms": "0.0.2"
+    "com.jsmobile.plugins.sms": "0.0.2",
+    "cordova-plugin-kiosk-launcher": "0.2"
   }
 }

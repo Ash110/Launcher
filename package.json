@@ -19,6 +19,7 @@
         "cordova-plugin-applist": "^0.1.12",
         "cordova-plugin-fullscreen": "^1.2.0",
         "cordova-plugin-geolocation": "^4.0.1",
+        "cordova-plugin-kiosk-launcher": "^1.1.1",
         "cordova-plugin-tts": "^0.2.3",
         "cordova-plugin-whitelist": "^1.3.3",
         "hazems-cordova-plugin-sms": "git+https://github.com/hazems/cordova-sms-plugin.git",
@@ -34,7 +35,8 @@
             "com.lampa.startapp": {},
             "call-number": {},
             "cordova-plugin-geolocation": {},
-            "com.jsmobile.plugins.sms": {}
+            "com.jsmobile.plugins.sms": {},
+            "cordova-plugin-kiosk-launcher": {}
         },
         "platforms": [
             "android"
